@@ -2,18 +2,16 @@
 
 ![](img/twitterSpam.jpg )
 
-## problem statement
+## 1) problem statement
 
 - Classify tweet into spam/non-spam ( current focus on covid19 related tweet)
 - As there is no label data yet, we will use other twitter spam dataset to determine its accuracy and perhaps can create human-- in-the-loop system to constant update and feedback the system
 
-
-## data source for model training
-
+- data source for model training
 https://www.kaggle.com/c/utkmls-twitter-spam-detection-competition/data
 
 
-## text preprocessing
+## 2) text preprocessing
 ```
 def clean( raw_text ):
     letters_only = re.sub("[^a-zA-Z]", " ", str(raw_text)) # Remove non-letters
@@ -26,9 +24,26 @@ def clean( raw_text ):
 ```
 
 
-## model 
+## 3) Word cloud visualization
 
-Naive bayes classifier
+#### Kaggle tweet data set (Spam)
+![](img/wordcloud_spam_kaggle.png )
+
+##### Kaggle tweet data set (non-Spam)
+![](img/wordcloud_nonSpam_kaggle.png )
+
+----- 
+
+#### Covid19 tweet data set (Spam)
+![](img/wordcloud_Spam_covid19.png )
+
+##### Covid19 data set (non-Spam)
+![](img/wordcloud_nonSpam_covid19.png)
+
+-----
+## 4) model 
+
+### Naive bayes classifier
 ```
 ## build a data processing pipeline
 text_clf = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_range=(1, 2))),
@@ -50,23 +65,6 @@ text_clf_svm = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_ran
 ![](img/NB_classifier_ROC.png )
 
 
-## Word cloud visualization
-
-#### Kaggle tweet data set (Spam)
-![](img/wordcloud_spam_kaggle.png )
-
-##### Kaggle tweet data set (non-Spam)
-![](img/wordcloud_nonSpam_kaggle.png )
-
------ 
-
-#### Covid19 tweet data set (Spam)
-![](img/wordcloud_Spam_covid19.png )
-
-##### Covid19 data set (non-Spam)
-![](img/wordcloud_nonSpam_covid19.png)
-
------
 
 ### Summary and suggestion
 - the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
