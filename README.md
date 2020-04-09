@@ -1,6 +1,6 @@
 # Twitter-spam-classification
 
-![](img/twitterSpam.jpg "Twitter spam classification")
+![](img/twitterSpam.jpg )
 
 ## problem statement
 
@@ -26,18 +26,18 @@ This work focus on item(2)
 
 
 Kaggle tweet data set (Spam)
-![](img/wordcloud_Spam_kaggle.jpg "WordCloud Kaggle spam")
+![](img/wordcloud_Spam_kaggle.jpg )
 
 Kaggle tweet data set (non-Spam)
-![](img/wordcloud_nonSpam_kaggle.jpg "WordCloud Kaggle non-spam")
+![](img/wordcloud_nonSpam_kaggle.jpg )
 
 //////////
 
 Covid19 tweet data set (Spam)
-![](img/wordcloud_Spam_covid19.jpg "WordCloud covid19 spam")
+![](img/wordcloud_Spam_covid19.jpg )
 
-Kaggle data set (non-Spam)
-![](img/wordcloud_nonSpam_covid19.jpg "WordCloud Kaggle non-spam")
+Covid19 data set (non-Spam)
+![](img/wordcloud_nonSpam_covid19.jpg)
 
 
 
