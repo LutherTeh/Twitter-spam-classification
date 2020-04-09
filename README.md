@@ -20,10 +20,9 @@ tweet spam detection can divided into 2 area
 - (1) Account level (detect bot, spam account)
 - (2) classify spam text only
 
-This work focus on item(2)
+current work focus on item(2)
 
 - the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
-
 
 Kaggle tweet data set (Spam)
 ![](img/wordcloud_Spam_kaggle.jpg )
