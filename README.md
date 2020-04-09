@@ -24,20 +24,21 @@ current work focus on item(2)
 
 - the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
 
-Kaggle tweet data set (Spam)
+#### Kaggle tweet data set (Spam)
 ![](img/wordcloud_Spam_kaggle.png )
 
-Kaggle tweet data set (non-Spam)
+##### Kaggle tweet data set (non-Spam)
 ![](img/wordcloud_nonSpam_kaggle.png )
 
-//////////
+----- 
 
-Covid19 tweet data set (Spam)
+#### Covid19 tweet data set (Spam)
 ![](img/wordcloud_Spam_covid19.png )
 
-Covid19 data set (non-Spam)
+##### Covid19 data set (non-Spam)
 ![](img/wordcloud_nonSpam_covid19.png)
 
+-----
 
 Suggestion:
 - human evaluation and feedback needed to update the predicted-label
