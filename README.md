@@ -22,8 +22,6 @@ tweet spam detection can divided into 2 area
 
 current work focus on item(2)
 
-- the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
-
 #### Kaggle tweet data set (Spam)
 ![](img/wordcloud_spam_kaggle.png )
 
@@ -40,7 +38,8 @@ current work focus on item(2)
 
 -----
 
-Suggestion:
+### Summary and suggestion
+- the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
 - human evaluation and feedback needed to update the predicted-label
 - explore unsupervised method like keyword clustering, semantic similarity between spam and other
 - we can add in emotional features to help further analysis on the spam and non-spam tweets
