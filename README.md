@@ -25,7 +25,7 @@ current work focus on item(2)
 - the word distribution quite different in  <font color='red'> kaggle-tweet-training data </font> vs <font color = 'blue'> covid19 tweets data </font> , thus we might need add in new covid19 related labeled data to ensure it able to capture more contextual data
 
 #### Kaggle tweet data set (Spam)
-![](img/wordcloud_Spam_kaggle.png )
+![](img/wordcloud_spam_kaggle.png )
 
 ##### Kaggle tweet data set (non-Spam)
 ![](img/wordcloud_nonSpam_kaggle.png )
