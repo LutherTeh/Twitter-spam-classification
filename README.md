@@ -34,6 +34,8 @@ def clean( raw_text ):
 
 ----- 
 
+## 4) Classify on new dataset ( covid19 )
+
 #### Covid19 tweet data set (Spam)
 ![](img/wordcloud_Spam_covid19.png )
 
