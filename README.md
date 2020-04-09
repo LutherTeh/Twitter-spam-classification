@@ -35,25 +35,22 @@ text_clf = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_range=(
                      ('tfidf', TfidfTransformer()),
                      ('clf', MultinomialNB(alpha=0.01)),])
 ```
-AUC score = 0.96
 
-SVM classifier
+#### AUC score = 0.96
+![](img/NB_classifier_ROC.png )
+
+
+### SVM classifier
 ```
 text_clf_svm = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_range=(1, 2))),
                          ('tfidf', TfidfTransformer()),
                          ('clf-svm', SGDClassifier(loss='hinge', penalty='l2',alpha=0.001, random_state=42)),])
 ```
-AUC score ~0.88
+#### AUC score ~0.88
+![](img/NB_classifier_ROC.png )
 
 
-## Overview
-
-tweet spam detection can divided into 2 area
-
-- (1) Account level (detect bot, spam account)
-- (2) classify spam text only
-
-current work focus on item(2)
+## Word cloud visualization
 
 #### Kaggle tweet data set (Spam)
 ![](img/wordcloud_spam_kaggle.png )
