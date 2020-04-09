@@ -34,14 +34,6 @@ def clean( raw_text ):
 
 ----- 
 
-## 4) Classify on new dataset ( covid19 )
-
-#### Covid19 tweet data set (Spam)
-![](img/wordcloud_Spam_covid19.png )
-
-##### Covid19 data set (non-Spam)
-![](img/wordcloud_nonSpam_covid19.png)
-
 -----
 ## 4) model 
 
@@ -66,6 +58,22 @@ text_clf_svm = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_ran
 #### AUC score ~0.88
 ![](img/SVM_classifier_ROC.png )
 
+-----
+
+
+## 5) Classify on new dataset ( covid19 only dataset)
+
+#### result file
+
+https://docs.google.com/spreadsheets/d/1TWSyk1fx5easzWWcUkC6bxIDbeyOfOCoA6gwpE4r9IM/edit?usp=sharing
+
+#### Covid19 tweet data set (Spam)
+![](img/wordcloud_Spam_covid19.png )
+
+##### Covid19 data set (non-Spam)
+![](img/wordcloud_nonSpam_covid19.png)
+
+-----
 
 
 ### Summary and suggestion
