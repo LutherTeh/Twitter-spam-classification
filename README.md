@@ -13,7 +13,40 @@
 https://www.kaggle.com/c/utkmls-twitter-spam-detection-competition/data
 
 
-## summary finding 
+## text preprocessing
+```
+def clean( raw_text ):
+    letters_only = re.sub("[^a-zA-Z]", " ", str(raw_text)) # Remove non-letters
+    words = letters_only.lower().split()  # Convert to lower case, split into individual words                           
+    stops = set(stopwords.words("english"))   # In Python, searching a set is much faster than searching a list, so convert the stop words to a set             
+    meaningful_words = [w for w in words if not w in stops]   # Remove stop words
+    #meaningful_words = [stemmer.stem(x) for x in meaningful_words ]  #stemmiing malay words
+    return ( " ".join( meaningful_words )) # Join the words back into one string separated by space, and return the result.
+
+```
+
+
+## model 
+
+Naive bayes classifier
+```
+## build a data processing pipeline
+text_clf = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_range=(1, 2))),
+                     ('tfidf', TfidfTransformer()),
+                     ('clf', MultinomialNB(alpha=0.01)),])
+```
+AUC score = 0.96
+
+SVM classifier
+```
+text_clf_svm = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_range=(1, 2))),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf-svm', SGDClassifier(loss='hinge', penalty='l2',alpha=0.001, random_state=42)),])
+```
+AUC score ~0.88
+
+
+## Overview
 
 tweet spam detection can divided into 2 area
 
