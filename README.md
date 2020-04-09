@@ -64,7 +64,7 @@ text_clf_svm = Pipeline([('vect', CountVectorizer(max_features = 5000, ngram_ran
                          ('clf-svm', SGDClassifier(loss='hinge', penalty='l2',alpha=0.001, random_state=42)),])
 ```
 #### AUC score ~0.88
-![](img/NB_classifier_ROC.png )
+![](img/SVM_classifier_ROC.png )
 
 
 
